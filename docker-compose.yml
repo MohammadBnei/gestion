@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  server:
+    build: ./hackathon-server
+    container_name: server
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./hackathon-server/:/usr/src/app
+    stdin_open: true
+  client:
+    build: ./hackathon-client
+    container_name: client
+    ports:
+      - 8080:8080
+      - 8087:8087
+    volumes: 
+      - ./hackathon-client/:/usr/src/app
+    stdin_open: true
+  mongo:
+      image: mongo
+      container_name: mongo
+      ports: 
+        - 27017:27017

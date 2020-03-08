@@ -1,0 +1,6 @@
+[submodule "hackathon-client"]
+	path = hackathon-client
+	url = https://github.com/MohammadBnei/hackathon-client.git
+[submodule "hackathon-server"]
+	path = hackathon-server
+	url = https://github.com/MohammadBnei/hackathon-server.git
